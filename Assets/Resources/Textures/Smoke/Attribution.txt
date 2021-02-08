@@ -1,0 +1,5 @@
+> WispySmoke01_8x8
+https://blogs.unity3d.com/2016/11/28/free-vfx-image-sequences-flipbooks/
+
+> RealisticSmoke02_4x4
+https://www.patreon.com/posts/unity-shader-vfx-25881518
