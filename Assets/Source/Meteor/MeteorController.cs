@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class MeteorController : MonoBehaviour
 {
+    private Vector3 StartPosition;
     public Transform MoveTowards;
     public float MoveSpeed;
 
@@ -13,6 +14,25 @@ public class MeteorController : MonoBehaviour
     public bool Ready;
     private bool HasCollided;
     private bool DisabledTrails;
+
+    public void Reset()
+    {
+        Ready = false;
+        HasCollided = false;
+        DisabledTrails = false;
+        transform.position = StartPosition;
+
+        Body.SetActive(true);
+        Impact.SetActive(false);
+
+        ToggleSystemsIn(Trails, true);
+        ToggleSystemsIn(Impact, false);
+    }
+
+    private void Start()
+    {
+        StartPosition = transform.position;
+    }
 
     private void Update()
     {
@@ -43,7 +63,7 @@ public class MeteorController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         HasCollided = true;
-        Body.gameObject.SetActive(false);
+        Body.SetActive(false);
 
         Impact.SetActive(true);
         ToggleSystemsIn(Impact, true);
