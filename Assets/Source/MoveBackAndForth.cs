@@ -14,7 +14,10 @@ public sealed class MoveBackAndForth : MonoBehaviour
         {
             float t = Time.time * Rate;
             float f = t - (float)Math.Truncate(t);
-            transform.position = Vector3.Lerp(PointA.transform.position, PointB.transform.position, f);
+            Vector3 next = Vector3.Lerp(PointA.transform.position, PointB.transform.position, f);
+
+            transform.LookAt(next, Vector3.up);
+            transform.position = next;
         }
         else
         {
