@@ -7,12 +7,22 @@ public sealed class MoveBackAndForth : MonoBehaviour
     public Transform PointB;
     public float Rate;
     public bool WrapAround;
+    public bool Paused;
+
+    private float Elapsed;
 
     void Update()
     {
+        if (Paused)
+        {
+            return;
+        }
+
+        Elapsed += Time.deltaTime;
+
         if (WrapAround)
         {
-            float t = Time.time * Rate;
+            float t = Elapsed * Rate;
             float f = t - (float)Math.Truncate(t);
             Vector3 next = Vector3.Lerp(PointA.transform.position, PointB.transform.position, f);
 
@@ -21,7 +31,7 @@ public sealed class MoveBackAndForth : MonoBehaviour
         }
         else
         {
-            float f = (Mathf.Cos(Time.time * Rate) + 1.0f) * 0.5f;
+            float f = (Mathf.Cos(Elapsed * Rate) + 1.0f) * 0.5f;
             transform.position = Vector3.Lerp(PointA.transform.position, PointB.transform.position, f);
         }
     }
