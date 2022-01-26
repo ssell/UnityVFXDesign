@@ -780,6 +780,7 @@ MonoBehaviour:
   PointB: {fileID: 951962599}
   Rate: 1
   WrapAround: 0
+  Paused: 0
 --- !u!1 &428452453
 GameObject:
   m_ObjectHideFlags: 0

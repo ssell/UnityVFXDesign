@@ -39,6 +39,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - Vector1_2905002b23b847b49bc77486abbd54fb: 3
     - Vector1_803a80af54c4445b86f3f9bb3c11e514: 4
@@ -46,6 +47,8 @@ Material:
     - Vector1_adcf1edeac6d49fdace8bee091307458: 1
     - Vector1_c3d427968dff402ab7589dc97825d3f1: 2
     - Vector1_d75f59c6ee0c4bd0a5224e9fee943d69: 7
+    - _QueueControl: 0
+    - _QueueOffset: 0
     m_Colors:
     - Color_1c884f079c114028ae634061ebcd640e: {r: 0.14150935, g: 0.14150935, b: 0.14150935, a: 0}
     - Color_365690f3b6cd410f9f1cbbff346d22ba: {r: 7.999999, g: 0.9545455, b: 0, a: 0}
@@ -63,4 +66,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 4
+  version: 5

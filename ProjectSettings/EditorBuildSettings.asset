@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MeteorEffect.unity
     guid: 010e0007065b537498e73c1e9a3852ed
+  - enabled: 1
+    path: Assets/Scenes/IceblockEffect.unity
+    guid: 4336d2ccced81b54ba6744fab9816397
   m_configObjects: {}
